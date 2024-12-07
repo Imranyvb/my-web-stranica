@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S📱Mobile</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+  <!-- Sadržaj preloadera, headera, i sekcija -->
+  <div id="preloader">
+    <div id="logo-container">
+      <img src="{{ url_for('static', filename='images/logo.png') }}" alt="S Mobile Logo" id="logo">
+      <img src="desktopNew note.jpeg" for walppaper>
+      <p id="logo-text">S 📱 Mobile</p>
+    </div>
+  </div>
+
+  <header>
+    <div class="logo">S📱Mobile</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Početna</a></li>
+        <li><a href="#catalog">Katalog</a></li>
+        <li><a href="#about">O Nama</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+        <li><a href="#profile" id="profile-link">Moj Profil</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h1>Dobrodošli u S📱Mobile</h1>
+    <p>Luksuzni telefoni i oprema.</p>
+    <button onclick="window.location.href='#catalog'">Pogledaj Katalog</button>
+  </section>
+
+  <section id="catalog" class="product-gallery">
+    <h2>Naš Katalog</h2>
+    <div class="product-container"></div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>O Nama</h2>
+    <p>S Mobile je specijalizovan za luksuzne telefone i dodatke.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Kontakt</h2>
+    <p>Vlasnik: Salih Mujkić</p>
+    <p>Adresa: Mehmedalije Tarabara 9, Zenica</p>
+    <p>Telefon: 062 299 273</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 S Mobile - Sva prava zadržana.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,5 @@
+@app.route("/api/users", methods=["GET"])
+def get_users():
+    users_ref = db.collection("users")
+    users = [{"id": user.id, **user.to_dict()} for user in users_ref.stream()]
+    return jsonify(users), 200

@@ -1,0 +1,17 @@
+import stripe
+
+stripe.api_key = "your-stripe-secret-key"
+
+@app.route("/api/payment", methods=["POST"])
+def payment():
+    data = request.get_json()
+    try:
+        charge = stripe.Charge.create(
+            amount=int(data["amount"] * 100),  # Centi
+            currency="eur",
+            source=data["token"],  # Stripe klijent generiše token
+            description="Plaćanje za proizvode"
+        )
+        return jsonify({"message": "Plaćanje uspešno!"}), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400

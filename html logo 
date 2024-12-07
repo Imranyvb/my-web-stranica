@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S 📱 Mobile</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Preloader i animacija slova -->
+  <div id="preloader">
+    <div id="logo-container">
+      <p id="logo-text">S <span id="phone-emoji">📱</span> Mobile</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
